@@ -1,5 +1,22 @@
 // WAP to sort a given array using Merge Sort
 
+function mergeSort(arr) {
+
+  // Base Case
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // Recursive Cases (Divide and Conquer)
+  var leftSubArray = arr.slice(0, arr.length/2);
+  var rightSubArray = arr.slice(arr.length/2);
+  var leftSubArraySorted = mergeSort(leftSubArray);
+  var rightSubArraySorted = mergeSort(rightSubArray);
+
+  // Merge left half and right half
+  return merge(leftSubArraySorted, rightSubArraySorted);
+}
+
 function merge(leftArray, rightArray) {
 
   var outputArray = [];
