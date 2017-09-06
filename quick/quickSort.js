@@ -1,8 +1,28 @@
 // WAP to sort a given array using Quick Sort
 
-function quickSort(arr) {
+function quickSort(arr, low, high) {
 
-  return arr;
+  if (low === undefined) {
+    low = 0;
+  }
+
+  if (high === undefined) {
+    high = arr.length - 1;
+  }
+
+  if (low < high) {
+
+    var pivotIndex = partition(arr, low, high);
+
+    quickSort(arr, low, pivotIndex - 1);
+    quickSort(arr, pivotIndex + 1, high);
+
+  }
+
+  if (high - low === arr.length-1) {
+    return arr;
+  }
+
 }
 
 function partition(arr, low, high) {
