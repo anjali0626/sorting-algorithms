@@ -5,7 +5,24 @@ function quickSort(arr) {
   return arr;
 }
 
-function partition() {
+function partition(arr, low, high) {
+
+  var pivot = arr[high];
+
+  var pivotIndex = low;
+
+  for (var i = low; i < high; i += 1) {
+
+    if (arr[i] <= pivot) {
+      swap(arr, pivotIndex, i);
+      pivotIndex += 1;
+    }
+
+  }
+
+  swap(arr, pivotIndex, high);
+
+  return pivotIndex;
 }
 
 function swap (arr, index1, index2) {
