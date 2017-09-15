@@ -1,5 +1,6 @@
 // WAP to sort a given array using Merge Sort
 
+// Time Complexity : O(n·log(n))
 function mergeSort(arr) {
 
   // Base Case
