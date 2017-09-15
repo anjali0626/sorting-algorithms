@@ -1,5 +1,6 @@
 // WAP to sort a given array using Bubble Sort
 
+// Time Complexity : O(n^2)
 function bubbleSort(arr) {
 
   for (var i = 0; i < arr.length - 1; i += 1) {
