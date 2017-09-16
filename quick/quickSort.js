@@ -1,5 +1,6 @@
 // WAP to sort a given array using Quick Sort
 
+// Time Complexity : O(n^2)
 function quickSort(arr, low, high) {
 
   if (low === undefined) {
